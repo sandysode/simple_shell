@@ -85,4 +85,4 @@ $ Ethio
 
 ### Authors
 [Wiseman Umanah](https://github.com/wiseman-umanah)
-[Sandra Ogehende](https://github.com/sandy)
+[Sandra Ogehenesode](https://github.com/sandy)
