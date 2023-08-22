@@ -3,14 +3,18 @@
 /**
 * unset - unsets an environment variable
 * @name: the name of environment variable to set
+* Return: returns -1 if failed, 0 for success
 */
 
-void unset(char *name)
+int unset(char *name)
 {
 	int i, j;
 
 	if (name == NULL)
-		return;
+	{
+		custom_error("Error: cannot set name and value");
+		return (-1);
+	}
 	i = 0;
 	while (__environ[i] != NULL)
 	{
@@ -23,4 +27,5 @@ void unset(char *name)
 		i++;
 	}
 	__environ[i] = __environ[i + 1];
+	return (0);
 }
