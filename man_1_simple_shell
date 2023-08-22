@@ -1,0 +1,50 @@
+.TH simple_shell "20 AUGUST, 2023" "V1.0" "simple_shell man page"
+.SH NAME				
+.B simple_shell - Simple Unix comand interpreter	
+simple_shell: the shell or command interpreter is the computer program 
+that provides a user interface to access the services of the operating system.
+
+.SH SYNOPSYS				
+.B #include \fB"main.h"
+
+./hsh
+/bin/[command] [option]
+[command] [option]
+
+.SH DESCRIPTION
+Shell is a user interface to use the services of a computer. 
+It can be a command-line interface –the one we will build- or graphical user interface, 
+like regular software such as Windows Office.
+
+.SH EXAMPLES
+$  /bin/ls -l
+$ ls -la
+total 85
+drwxrwxrwx 1 wiseman wiseman   512 Aug 19 15:02 .
+drwxr-x--- 1 wiseman wiseman   512 Aug 19 14:23 ..
+drwxrwxrwx 1 wiseman wiseman   512 Aug 19 14:23 .git
+-rw-rw-rw- 1 wiseman wiseman  3456 Aug 19 15:03 README.md
+-rw-rw-rw- 1 wiseman wiseman   858 Aug 19 14:18 _setenv.c
+-rw-rw-rw- 1 wiseman wiseman  1251 Aug 16 23:50 _strtok.c
+-rw-rw-rw- 1 wiseman wiseman   434 Aug 19 10:58 _unset.c
+-rwxrwxrwx 1 wiseman wiseman 17648 Aug 19 08:53 a.out
+-rw-rw-rw- 1 wiseman wiseman   536 Aug 19 14:09 break_input.c
+-rw-rw-rw- 1 wiseman wiseman   563 Aug 19 14:45 checkargs.c
+-rw-rw-rw- 1 wiseman wiseman   231 Aug 19 10:39 environ.c
+-rw-rw-rw- 1 wiseman wiseman   537 Aug 19 14:16 execute.c
+-rw-rw-rw- 1 wiseman wiseman   356 Aug 19 14:13 exit_com.c
+-rw-rw-rw- 1 wiseman wiseman   268 Aug 19 07:49 free_buff.c
+-rw-rw-rw- 1 wiseman wiseman   500 Aug 19 14:14 handle_comment.c
+-rw-rw-rw- 1 wiseman wiseman   430 Aug 19 08:51 handle_coms.c
+-rwxrwxrwx 1 wiseman wiseman 17664 Aug 19 14:43 hsh
+-rw-rw-rw- 1 wiseman wiseman   667 Aug 19 14:40 main.c
+-rw-rw-rw- 1 wiseman wiseman   702 Aug 19 14:15 main.h
+
+.SH AUTHOR'S				
+-Written by Wiseman Umanah<wisemanumanah@gmail.com> and Sandra Oghenesode<sandraoghenessode@gmail.com>
+
+
+.SH BUGS
+There were no errors in the testing time of this code (August, 20 2023).
+.SH SEE ALSO
+sh
