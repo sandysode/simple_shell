@@ -4,10 +4,10 @@
 * checkargs - this check arguments passed
 * @arg: number of args passed
 * @ac: array of args
-* @exe: for executable
+* @exec_file: for executable
 * Return: returns pointer to stdin
 */
-int checkargs(int arg, char **ac, int *exe)
+int checkargs(int arg, char **ac, int *exec_file)
 {
 	int temp = STDIN_FILENO;
 	char *error = "Error: more than one argument\n";
@@ -15,12 +15,6 @@ int checkargs(int arg, char **ac, int *exe)
 	if (arg > 2)
 	{
 		write(STDOUT_FILENO, error, strlen(error));
-	}
-	/*Handle executable files if any e.g "./a.out /bin/ls" */
-	if (arg == 2)
-	{
-		temp = open(ac[1], O_RDONLY);
-		*exe = 1;
 	}
 	if (temp == -1)
 	{

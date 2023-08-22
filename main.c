@@ -1,5 +1,7 @@
 #include "main.h"
 
+static char *FIRSTARG;
+
 /**
 * main -Entry point
 * @arg: number of argument
@@ -11,21 +13,22 @@ int main(int arg, char **av)
 {
 	ssize_t get;
 	size_t buff_size;
-	int exe, fd;
+	int exec_file, fd;
 	char *buffer = NULL;
 
+	FIRSTARG = av[0];
 	buff_size = 0;
-	exe = 0;
-	fd = checkargs(arg, av, &exe);
+	exec_file = 0;
+	fd = checkargs(arg, av, &exec_file);
 	while (1)
 	{
-		/*Write $ to STDIN*/
-		write(STDOUT_FILENO, "$ ", 2);
+		if (isatty(STDIN_FILENO) == 1 && exec_file == 0)
+			write(STDOUT_FILENO, "$ ", 2);
 		/*Get STDIN from STDIN*/
 		get = getline(&buffer, &buff_size, stdin);
 		if (get == EOF)
 		{
-			exit(98);
+			free(buffer);
 			return (0);
 		}
 		buffer = handle_comment(buffer);
@@ -33,7 +36,17 @@ int main(int arg, char **av)
 		brkdown_args(buffer);
 	}
 	free(buffer);
-	if (exe)
+	if (exec_file)
 		close(fd);
 	return (0);
+}
+
+/**
+ * get_first_av - Returns the first argument passed to main
+ *
+ * Return: Pointer to first arg passed to main
+*/
+char *get_first_av(void)
+{
+	return (FIRSTARG);
 }

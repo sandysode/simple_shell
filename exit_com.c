@@ -11,8 +11,7 @@ int exit_com(char **buffer, int buff_size)
 	if (strcmp(*buffer, "exit") == 0 || *buffer == NULL)
 	{
 		free_buff(buffer, buff_size);
-		exit(98);
-		return (0);
+		exit(0);
 	}
 	else
 		return (1);
