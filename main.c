@@ -19,7 +19,7 @@ int main(int arg, char **av)
 	FIRSTARG = av[0];
 	buff_size = 0;
 	exec_file = 0;
-	fd = checkargs(arg, av, &exec_file);
+	fd = checkargs(arg, av);
 	while (1)
 	{
 		if (isatty(STDIN_FILENO) == 1 && exec_file == 0)

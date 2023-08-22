@@ -7,7 +7,7 @@
 * @exec_file: for executable
 * Return: returns pointer to stdin
 */
-int checkargs(int arg, char **ac, int *exec_file)
+int checkargs(int arg, char **ac)
 {
 	int temp = STDIN_FILENO;
 	char *error = "Error: more than one argument\n";

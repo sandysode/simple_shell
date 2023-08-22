@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 
-int checkargs(int arg, char **ac, int *exe);
+int checkargs(int arg, char **ac);
 int brkdown_args(char *buffer);
 int execute_file(char **buffer, int buff_size);
 char *handle_comment(char *str_input);
