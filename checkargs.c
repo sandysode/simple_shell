@@ -4,7 +4,6 @@
 * checkargs - this check arguments passed
 * @arg: number of args passed
 * @ac: array of args
-* @exec_file: for executable
 * Return: returns pointer to stdin
 */
 int checkargs(int arg, char **ac)
