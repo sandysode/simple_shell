@@ -32,7 +32,7 @@ int validate_env_name(char *name)
 int is_valid_env_var_name(char *name)
 {
 	int i;
-	
+
 	for (i = 0; name[i] != '\0'; i++)
 		if (name[i] == '=')
 			return (0);
