@@ -1,4 +1,5 @@
-#include "main.h"
+#include "shell.h"
+
 /**
  * handle_comment - deletes a comment from the buffer
  * @str_input: User's input

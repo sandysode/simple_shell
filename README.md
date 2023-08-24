@@ -46,7 +46,17 @@ $
 
 #### But also in non-interactive mode:
 ```
-Code is not responsive in non-interactive mode, Might result in unsual behavior. Working on that.
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+$ cat test_ls_2
+/bin/ls
+/bin/ls
+$
+$ cat test_ls_2 | ./hsh
+hsh main.c shell.c test_ls_2
+hsh main.c shell.c test_ls_2
+$
 ```
 ### Examples
 ```
